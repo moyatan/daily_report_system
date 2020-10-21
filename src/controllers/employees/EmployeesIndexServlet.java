@@ -66,6 +66,7 @@ public class EmployeesIndexServlet extends HttpServlet {
             request.getSession().removeAttribute("flush");
         }
 
+        //createServletで受け取ったcodeなどの値をindex.jspに送信してビューにする
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/index.jsp");
         rd.forward(request, response);
     }
