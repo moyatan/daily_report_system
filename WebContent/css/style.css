@@ -79,4 +79,7 @@ button {
     color: #155724;
     background-color: #d4edda;
 }
+select {
+    height: 30px;
+}
 }

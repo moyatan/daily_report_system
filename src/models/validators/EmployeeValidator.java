@@ -48,7 +48,7 @@ public class EmployeeValidator {
 
             //NameQueryで同じコードが何件あるのかカウントする
             //setParameterにセットしたcodeという値が何件あるのかカウントする
-            //getSingleResultは件数だけを取得するのでシングルで大丈夫
+            //getSingleResultは件数だけを取得するのでシングル
             long employees_count = (long)em.createNamedQuery("checkRegisteredCode", Long.class)
                                            .setParameter("code", code)
                                              .getSingleResult();
