@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
+    <%--loginServletでセットしたhasErrorがtrueの場合実行 --%>
         <c:if test="${hasError}">
             <div id="flush_error">
                 社員番号かパスワードが間違っています。
