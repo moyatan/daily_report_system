@@ -74,6 +74,8 @@ public class EmployeesUpdateServlet extends HttpServlet {
             e.setUpdated_at(new Timestamp(System.currentTimeMillis()));
             e.setDelete_flag(0);
 
+            //入力された値がnullか空白の場合バリデーションクラスを実行してそれ以外の場合は
+            //トランザクションをいつかってデータベースにデータを保存する
             List<String> errors = EmployeeValidator.validate(e, code_duplicate_check, password_check_flag);
             if(errors.size() > 0) {
                 em.close();
@@ -91,7 +93,6 @@ public class EmployeesUpdateServlet extends HttpServlet {
                 request.getSession().setAttribute("flush", "更新が完了しました。");
 
                 request.getSession().removeAttribute("employee_id");
-
                 response.sendRedirect(request.getContextPath() + "/employees/index");
             }
         }
