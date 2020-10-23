@@ -5,6 +5,7 @@
         <c:choose>
             <c:when test="${report != null}">
                 <h2>日報　編集ページ</h2>
+                <%--updateSErvletにPOST送信する --%>
                 <form method="POST" action="<c:url value='/reports/update' />">
                     <c:import url="_form.jsp" />
                 </form>
