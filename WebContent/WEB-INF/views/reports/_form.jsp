@@ -19,7 +19,7 @@
 <br /><br />
 
 <label for="title">タイトル</label><br />
-<input type="text" name="title" value="${report.title}" />
+<input type="text" name="title" value="${report.title }"  />
 <br /><br />
 
 <label for="content">内容</label><br />

@@ -18,11 +18,10 @@
                     <th class="report_title">タイトル</th>
                     <th class="report_action">操作</th>
                 </tr>
-
                 <%--reportにreportsのリストを順番に代入してループ回数をカウントする --%>
                 <c:forEach var="report" items="${reports}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                    <%--reportクラスと結合してemployeeクラスからnameフィールドを持ってくる --%>
+                    <%--CreateSErvletでセットしたnameを表示--%>
                         <td class="report_name"><c:out value="${report.employee.name}" /></td>
                         <%--reportクラスからreport_dateを持ってくる --%>
                         <td class="report_date"><fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' /></td>
